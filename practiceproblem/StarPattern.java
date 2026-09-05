@@ -1,3 +1,5 @@
+package practiceproblem;
+
 import java.util.Scanner;
 
 public class StarPattern {
@@ -8,7 +10,7 @@ public class StarPattern {
         System.out.print("Enter number of rows: ");
         int rows = sc.nextInt();
 
-        System.out.println("The right-angled triangle pattern for " + rows + " rows is");
+        System.out.println("The right-angled triangle pattern for " + rows + " rows is:");
 
         for (int i = 1; i <= rows; i++) {
 
@@ -18,5 +20,7 @@ public class StarPattern {
 
             System.out.println();
         }
+
+        sc.close();
     }
 }

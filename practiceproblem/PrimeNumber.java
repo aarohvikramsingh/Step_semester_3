@@ -1,3 +1,4 @@
+package practiceproblem;
 import java.util.Scanner;
 
 public class PrimeNumber {
@@ -10,13 +11,19 @@ public class PrimeNumber {
 
         boolean isPrime = true;
 
-        for (int i = 2; i < number; i++) {
-            if (number % i == 0) {
-                isPrime = false;
-                break;
+        if (number <= 1) {
+            isPrime = false;
+        } else {
+            for (int i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    isPrime = false;
+                    break;
+                }
             }
         }
 
         System.out.println("Is the number " + number + " a Prime number? " + isPrime);
+        
+        sc.close();
     }
 }

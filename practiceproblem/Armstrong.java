@@ -1,6 +1,7 @@
+package practiceproblem;
 import java.util.Scanner;
 
-public class Palindrome {
+public class Armstrong {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -9,21 +10,20 @@ public class Palindrome {
         int number = sc.nextInt();
 
         int origNumber = number;
-        int reversedNumber = 0;
+        int sum = 0;
 
         while (number != 0) {
-
             int digit = number % 10;
-
-            reversedNumber = reversedNumber * 10 + digit;
-
+            sum = sum + digit * digit * digit;
             number = number / 10;
         }
 
-        if (reversedNumber == origNumber) {
-            System.out.println("Is the number " + origNumber + " a Palindrome? true");
+        if (sum == origNumber) {
+            System.out.println("Is the number " + origNumber + " an Armstrong number? true");
         } else {
-            System.out.println("Is the number " + origNumber + " a Palindrome? false");
+            System.out.println("Is the number " + origNumber + " an Armstrong number? false");
         }
+
+        sc.close();
     }
 }

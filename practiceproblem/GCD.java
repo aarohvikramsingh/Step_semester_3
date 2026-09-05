@@ -1,3 +1,4 @@
+package practiceproblem;
 import java.util.Scanner;
 
 public class GCD {
@@ -15,14 +16,13 @@ public class GCD {
         int original2 = number2;
 
         while (number2 != 0) {
-
             int remainder = number1 % number2;
-
             number1 = number2;
-
             number2 = remainder;
         }
 
         System.out.println("The GCD of " + original1 + " and " + original2 + " is " + number1);
+
+        sc.close();
     }
 }
